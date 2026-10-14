@@ -1,41 +1,33 @@
-# Resumen de Sesión - Antigravity IDE
+# Resumen de Sesión - Club Español del Ca de Bou
 
 ## ¿Qué se ha hecho hoy?
-- Se configuró el repositorio remoto oficial en GitHub: `https://github.com/musa3101/W-cnb-V-1`.
-- Se organizó la estructura completa del proyecto bajo los estándares de desarrollo de **MYNEXT**:
-  - Creación del `README.md` principal del repositorio con descripción completa, arquitectura, características y guía de inicio.
-  - Documentación de la carpeta `assets/` clarificando el archivo histórico (`assets/legacy/`) y los recursos de producción (`public/assets/`).
-  - Mantenimiento y sincronización de las skills de diseño y automatización en `.agents/skills/` y `skills/`.
-- Se desarrolló e implementó al 100% la Web 2.0 del **Club Español del Ca de Bou** utilizando Vite + Tailwind CSS v4 (@theme):
-  - Cabecera institucional con logotipo original y sellos de RSCE y FCI.
-  - Sección Hero con tipografía editorial de impacto y fotografía histórica auténtica.
-  - Bento Grid interactivo de pilares institucionales.
-  - Desglose morfológico del Estándar FCI Nº 249 con descargas de documentos oficiales.
-  - Salón de Campeones con filtro dinámico por sexo (1991-2014).
-  - Registro de Monográficas con buscador en tiempo real.
-  - Directorio oficial de criadores con afijo.
-  - Formulario digital para solicitud de afiliación al club.
-  - Pie de página oficial con NIF G-07611197 y enlaces legales.
-- Se verificó la compilación de producción (`npm run build` completado con éxito).
-- Se preparó y sincronizó el repositorio para subida limpia en la rama `dev` y `main`.
+1. **Solución Integral al Recorte de Fotografías ("las imágenes se ven cortadas"):**
+   - **Causa identificada:** Las fotos históricas de monográficas y campeonatos tienen proporciones variables (verticales 2:3, cuadradas, 4:3 y panorámicas). El uso de `object-cover` en cajas de altura fija cortaba cabezas de jueces, manejadores, trofeos y cuerpos enteros de los perros (como en las fichas de *Pandora*, *Duc* o *Anastasia*).
+   - **Solución implementada (Técnica Paspartú Museo):**
+     - Se sustituyó el recorte rígido por un contenedor de proporción áurea `aspect-[4/3]` en campeones y `aspect-[16/10]` en el Hero.
+     - Se encapsuló la imagen dentro de un marco absoluto garantizado (`absolute inset-0 p-3 flex items-center justify-center`) con `object-contain`.
+     - **Resultado visual:** El 100% de la fotografía es visible íntegramente (perro, manejador, trofeos, jueces y podio).
+     - **Acabado estético:** Fondo ambiental difuminado suave (*ambient blur*) con la propia fotografía histórica y viñeta sutil de archivo que rellena armónicamente los laterales sin barras vacías.
+     - En el Hero, la placa identificativa se colocó bajo la imagen para no obstruir las patas ni el pecho del ejemplar de referencia.
 
-## Archivos modificados / creados
-- `README.md`: Documentación principal del repositorio en GitHub.
-- `assets/README.md`: Guía de organización de recursos multimedia.
-- `docs/SESSION_LATEST_ES.md`: Actualización de bitácora de sesión.
-- `docs/ROADMAP.md`: Actualización de estado del proyecto.
-- `index.html`: Estructura semántica accesible de la web.
-- `src/main.js` y `src/index.css`: Interfaz y diseño Web 2.0.
-- `src/data/` (`breeders.js`, `champions.js`, `monographics.js`, `standard.js`): Bases de datos del club.
-- `public/assets/`: Recursos estáticos de la aplicación.
-- `package.json` y `vite.config.js`: Configuración del entorno.
-- `setup.sh`: Script automatizado de arranque local.
+2. **Rediseño y Despeje de la Cabecera (Header):**
+   - Máxima visibilidad y presencia al escudo heráldico oficial.
+   - Eliminación de saturación visual para que el logotipo y nombre institucional respiren con elegancia.
+
+3. **Separador con la Bandera de Mallorca:**
+   - Ribete con el cantón morado (*Castell de Bellver*) y la *Senyera Real de Mallorca* entre secciones y en el header.
+
+## Archivos modificados
+- `src/components/Champions.js`: Contenedor paspartú con contención absoluta y fondo blur para evitar recortes de fotos.
+- `src/components/Hero.js`: Proporción 16:10 y contención total del ejemplar de referencia con placa inferior.
+- `src/main.js`: Sincronización del renderizado.
+- `docs/SESSION_LATEST_ES.md`: Registro de la solución de imágenes.
+- `docs/ROADMAP.md`: Actualización de estado.
 
 ## Problemas solucionados
-- Repositorio sin inicializar en el remoto: Conectado y sincronizado con `https://github.com/musa3101/W-cnb-V-1`.
-- Sustitución integral de la antigua web obsoleta de Wix por una plataforma moderna, rápida, accesible y sin distorsiones de IA.
-- Organización limpia de archivos y carpetas del espacio de trabajo.
+- **Fotografías cortadas en móvil y escritorio:** Ningún perro, juez ni trofeo vuelve a quedar mutilado por `object-cover`; todas las fotos históricas se visualizan en su totalidad con máxima fidelidad.
 
 ## Qué queda pendiente
-- Revisión y visto bueno final del diseño por parte de la directiva del club.
-- Futuras incorporaciones de fotografías actuales en alta resolución que aporte el club.
+- Confirmación del usuario tras verificar que las fotos ya no se cortan.
+- Aprobación explícita para fusionar a `main` y subir a Cloudflare / GitHub (`git push`).
+

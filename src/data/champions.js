@@ -13,7 +13,7 @@ export const championsData = [
     name: 'Anastasia',
     gender: 'Hembra',
     years: '1991 - 1994',
-    image: '/assets/media/76c985_c231990441a1432db76ba3eb09f87c88.jpg',
+    image: '/assets/media/76c985_c231990441a1432db76ba3eb09f85a38.png',
     titles: 'Campeona de España (4 veces consecutivas)',
     description: 'Hembra pilar en la recuperación de la raza y ganadora absoluta de las cuatro primeras monográficas.'
   },
@@ -22,7 +22,7 @@ export const championsData = [
     name: 'Armando',
     gender: 'Macho',
     years: '1993',
-    image: '/assets/media/76c985_f19a2a71a8e0462098e3876b883c8ae9.jpg',
+    image: '/assets/media/76c985_f19a2a71a8e0462098e3876b883cb3d6.png',
     titles: 'Campeón de España',
     description: 'Ganador de la III Monográfica bajo el juicio de D. Francisco Ruiz Rodríguez.'
   },
@@ -31,7 +31,7 @@ export const championsData = [
     name: 'Chimo',
     gender: 'Macho',
     years: '1995',
-    image: '/assets/media/76c985_2af28c480ee642439cacecac43ecfa1e.jpg',
+    image: '/assets/media/76c985_2af28c480ee642439cacecac43ece862.png',
     titles: 'Campeón de España',
     description: 'V Monográfica oficial del Club Español del Ca de Bou.'
   },
@@ -40,7 +40,7 @@ export const championsData = [
     name: 'Pandora',
     gender: 'Hembra',
     years: '1995 - 1997',
-    image: '/assets/media/76c985_9e2fb304a6ba401d81ad2c22fbaf677b.jpg',
+    image: '/assets/media/76c985_9e2fb304a6ba401d81ad2c22fbafa7ac.png',
     titles: 'Campeona de España',
     description: 'Mejor hembra en la V Monográfica y destacada reproductora.'
   },
@@ -49,7 +49,7 @@ export const championsData = [
     name: 'Duc',
     gender: 'Macho',
     years: '1997 - 1998',
-    image: '/assets/media/76c985_eec9b1e28ca74512ac23226796b86cf8.jpg',
+    image: '/assets/media/76c985_eec9b1e28ca74512ac23226796b8740b.png',
     titles: 'Campeón de España',
     description: 'Vencedor de la VI y VII Monográfica con los jueces Rafael Malo y Sergio Gual.'
   },
@@ -58,7 +58,7 @@ export const championsData = [
     name: 'Cassandra de Almallutx',
     gender: 'Hembra',
     years: '1998',
-    image: '/assets/media/76c985_645eb7a4583a48c2a08650fb08b7baea.jpg',
+    image: '/assets/media/76c985_645eb7a4583a48c2a08650fb08b7f998.png',
     titles: 'Campeona del Club',
     description: 'Destacada hembra dorada del afijo Almallutx.'
   },
@@ -67,7 +67,7 @@ export const championsData = [
     name: 'Excalibur de Almallutx',
     gender: 'Macho',
     years: '1999 - 2000',
-    image: '/assets/media/76c985_fd9c132f37d44b05bdf834c7c4375bcf.jpg',
+    image: '/assets/media/76c985_fd9c132f37d44b05bdf834c7c4375de5.png',
     titles: 'Campeón de España y BIS Monográfica',
     description: 'Ejemplar referente en la consolidación del tipo moderno y proporciones del Ca de Bou.'
   },

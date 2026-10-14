@@ -20,27 +20,38 @@ El repositorio sigue una arquitectura modular y limpia:
 │   └── skills/              # Habilidades especializadas (gpt-taste, uipro-max, etc.)
 ├── assets/
 │   ├── README.md            # Guía explicativa de gestión de recursos multimedia
-│   └── legacy/              # Fototeca y documentos históricos originales del club
+│   └── legacy/              # Archivo histórico inmutable de fototeca y documentos originales
 ├── docs/
 │   ├── SESSION_LATEST_ES.md # Resumen en español de la última sesión de desarrollo
 │   ├── ROADMAP.md           # Hoja de ruta y estado de tareas (completadas / pendientes)
+│   ├── typography.md        # Guía del sistema de tipografías y jerarquía visual MYNEXT
 │   └── audit/               # Auditoría técnica de migración y catálogos de activos
 ├── public/
 │   └── assets/              # Activos estáticos en producción servidos por Vite
 │       ├── docs/            # Documentos normativos oficiales descargables (.doc)
 │       └── media/           # Galería optimizada de campeones históricos y logos
 ├── src/
+│   ├── components/          # Arquitectura modular de interfaz de usuario (UI)
+│   │   ├── Header.js        # Cabecera institucional y navegación adaptativa
+│   │   ├── Hero.js          # Portada monumental y arquetipo de referencia
+│   │   ├── BentoGrid.js     # Crónica histórica Balear (S. XIII) y FCI 249
+│   │   ├── Standard.js      # Anatomía morfológica y expedientes oficiales
+│   │   ├── Champions.js     # Salón de campeones con filtros de género
+│   │   ├── Monographics.js  # Monográficas nacionales con buscador en vivo
+│   │   ├── Breeders.js      # Directorio oficial de criadores acreditados
+│   │   ├── MembershipForm.js# Formulario oficial de afiliación y credencial
+│   │   ├── Footer.js        # Pie de página institucional y sellos oficiales
+│   │   ├── MobileDock.js    # Dock inferior de acceso rápido para móviles
+│   │   └── index.js         # Exportación centralizada de componentes
 │   ├── data/                # Bases de datos reactivas en Javascript
 │   │   ├── breeders.js      # Directorio oficial de criadores con afijo
 │   │   ├── champions.js     # Salón histórico de campeones (1991 - 2014)
 │   │   ├── monographics.js  # Registro cronológico de Exposiciones Monográficas
 │   │   └── standard.js      # Estándar oficial FCI Nº 249 y desglose morfológico
 │   ├── index.css            # Estilos globales y tokens con Tailwind CSS v4 (@theme)
-│   └── main.js              # Lógica interactiva de componentes, filtros y navegación
-├── typography/
-│   └── README.md            # Guía del sistema de tipografías y jerarquía visual
+│   └── main.js              # Orquestador reactivo de estado y renderizado
 ├── index.html               # Estructura semántica, accesibilidad y metadatos SEO
-├── package.json             # Dependencias del proyecto (Vite, Tailwind, Lucide)
+├── package.json             # Dependencias del proyecto (Vite, Tailwind)
 ├── setup.sh                 # Script automatizado para inicio de entorno de desarrollo
 └── vite.config.js           # Configuración del empaquetador Vite y plugins
 ```
