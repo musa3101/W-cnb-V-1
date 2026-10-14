@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Sistema de color Google Stitch: Monografía & Balearic Gold */
+  --color-surface-lowest: #0c0e11;
+  --color-surface: #111317;
+  --color-surface-low: #1a1c1f;
+  --color-surface-container: #1e2023;
+  --color-surface-high: #282a2d;
+  --color-surface-highest: #333538;
+
+  --color-primary-gold: #f2be71;
+  --color-primary-container: #d4a359;
+  --color-primary-dim: #c5a059;
+  
+  --color-secondary-gold: #eac081;
+  --color-secondary-container: #5e410e;
+
+  --color-text-main: #e2e2e6;
+  --color-text-variant: #d3c4b3;
+  --color-text-muted: #9c8f7f;
+  --color-border-subtle: #4f4538;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Material Symbols Styling */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Tipografía de Lujo Editorial MYNEXT x Google Stitch */
+.font-display-hero {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.font-headline-lg {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.font-headline-sm {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.font-label-caps {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  line-height: 1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.font-pedigree-meta {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* Tarjetas de lujo con marco áureo y esquinas de corte editorial */
+.luxury-monograph-card {
+  background: radial-gradient(circle at 10% 20%, rgba(30, 32, 35, 0.95), rgba(17, 19, 23, 0.98));
+  border: 1px solid rgba(79, 69, 56, 0.45);
+  border-radius: 0.5rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.luxury-monograph-card:hover {
+  border-color: rgba(242, 190, 113, 0.6);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.8), 0 0 20px -5px rgba(212, 163, 89, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Esquinas de marco de oro (Gilded corner brackets) */
+.gilded-frame {
+  position: relative;
+}
+.gilded-bracket-tl {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--color-primary-gold);
+  border-left: 2px solid var(--color-primary-gold);
+  pointer-events: none;
+}
+.gilded-bracket-tr {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--color-primary-gold);
+  border-right: 2px solid var(--color-primary-gold);
+  pointer-events: none;
+}
+.gilded-bracket-bl {
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--color-primary-gold);
+  border-left: 2px solid var(--color-primary-gold);
+  pointer-events: none;
+}
+.gilded-bracket-br {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--color-primary-gold);
+  border-right: 2px solid var(--color-primary-gold);
+  pointer-events: none;
+}
+
+/* Badge con orla de oro */
+.badge-gold {
+  background: rgba(242, 190, 113, 0.1);
+  border: 1px solid rgba(242, 190, 113, 0.35);
+  color: var(--color-primary-gold);
+}
+
+/* Botón CTA premium */
+.btn-primary-gold {
+  background: linear-gradient(135deg, #f2be71 0%, #d4a359 100%);
+  color: #291800;
+  font-weight: 700;
+  box-shadow: 0 8px 24px -6px rgba(212, 163, 89, 0.35);
+  transition: all 0.25s ease;
+}
+.btn-primary-gold:hover {
+  background: linear-gradient(135deg, #fce1ac 0%, #e2b36a 100%);
+  box-shadow: 0 12px 30px -4px rgba(212, 163, 89, 0.5);
+  transform: translateY(-1px);
+}
